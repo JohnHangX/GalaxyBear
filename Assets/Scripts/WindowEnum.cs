@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum WindowEnum  {
-    Win1,
-    Win2,
+    WinStart,
+    WinGame,
 }

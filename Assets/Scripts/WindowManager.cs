@@ -36,9 +36,10 @@ public class WindowManager{
     public Dictionary<WindowEnum, BaseWindow> winDic = new Dictionary<WindowEnum, BaseWindow>();
     public Dictionary<WindowEnum, BaseWindow> winObjDic = new Dictionary<WindowEnum, BaseWindow>();
     public BaseWindow curWin;
+    public WindowEnum curWinEnum;
     public void Init()
     {
-        OpenWin(WindowEnum.Win1);
+        OpenWin(WindowEnum.WinStart);
     }
 
     public void OpenWin(WindowEnum win)
@@ -56,6 +57,7 @@ public class WindowManager{
             winDic[win] = GetWinByEnum(win);
         }
         curWin = winDic[win];
+        curWinEnum = win;
     }
 
     private BaseWindow GetWinByEnum(WindowEnum win)
